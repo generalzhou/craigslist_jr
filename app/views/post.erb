@@ -1,14 +1,12 @@
 <body>
 <div class="container">
-  <h1>WELCOME TO ABESLIST</h1>
-  <h3><%= @post.title %></h3>
-  <ul>
-    <%= @post.description %>
-    <% if @post.price %>
-      <%= @post.price %>
-    <% end %>
-
-
+  <h3><%= Category.find(@post.category_id).title + ":"%></h3>
+  <h3><%= @post.title%></h3>
+  <ul class="post">
+    <%= @post.price ? "<h4>Price: </h4><li>#{@post.price}</li>" : "" %>
+    <%= @post.location ? "<h4>Location: </h4><li>#{@post.location}</li>" : "" %>
+    <h4>Post Description:</h4>
+    <li><%= @post.description %></li>
   </ul> 
 </div>
 </body>

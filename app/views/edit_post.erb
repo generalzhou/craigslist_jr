@@ -1,8 +1,4 @@
-<body>
-<div class="container">
-
-  <h1>WELCOME TO ABESLIST</h1>
-  <h3>Edit your Post</h3>
+<h3>Edit your Post</h3>
 
   <table>
   <form method="post" action="/post_created">
@@ -25,7 +21,7 @@
     <tr>
       <td>Category:</td>
       <td><select name="category_id">
-          <% @categories.each do |cat| %>
+          <% Category.all.each do |cat| %>
           <option value="<%=cat.id%>" <%= "selected" if @post.category_id == cat.id %> ><%=cat.title%></option>
           <% end %>
           </select>
@@ -35,5 +31,3 @@
     <input type="hidden" name="id" value="<%=@id%>">
     </form>
   </table>
-</div>
-</body>

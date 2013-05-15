@@ -1,3 +1,4 @@
+
 get '/' do
   # Look in app/views/index.erb
   @categories = Category.all
@@ -17,6 +18,7 @@ get '/post' do
   @post_id = params[:id]
   @post = Post.where(:id => @post_id).first
   @title = @post.title
+  @category = Category.all
   erb :post
 end
 
@@ -31,9 +33,6 @@ get '/edit_post' do
     @post = found_posts.first 
     @id = @post.id
   end
-
-  @categories = Category.all
-
   erb :edit_post
 end
 

@@ -1,8 +1,51 @@
-.container {
+body {
+  margin: 0;
+  padding:0;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: none;
+}
+
+ul.post > li {
+  font-size: 16px;
+  font-color: #878787;
+}
+
+ul {
+  padding: 0;
+}
+
+h2 {
+  margin:0;
+}
+
+.content {
   margin: 20px auto;
-  width: 600px;
+  width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
+}
+
+.content2 {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
 }
 
 th {
@@ -13,8 +56,47 @@ table {
   width: 90%;
 }
 
-
 td {
   padding-bottom: 20px;
   margin-bottom: 20px; 
 }
+
+.top-nav {
+
+margin-left:auto; 
+margin-right:auto; 
+width: 800px;
+  padding: 0px 20px 20px 20px;
+
+}
+.fixed-header {
+  position:fixed;
+  background-color:black;
+  height: 100px;
+  width:100%;
+  margin: 0;
+
+}
+
+ul > li {
+  list-style: none;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+
+ul.inline > li {
+  display: inline;
+  padding:0;
+}
+
+.nav{
+  text-decoration:none
+}
+
+
+
+div.content {
+  padding-top: 120px;
+}
+
+

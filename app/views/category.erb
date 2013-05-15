@@ -1,15 +1,9 @@
-<head>
-  <title><%= @category_name %></title>
-</head>
-
-<body>
-<div class="container">
-  <h1>WELCOME TO ABESLIST</h1>
-  <h3>Categories: <%= @category_name %></h3>
+  <h3><%= @category_name %></h3>
   <ul>
     <% @posts.each do |post| %>
       <li><a href="/post?id=<%= post.id %>"><%= post.title %></a></li>
     <% end %>
   </ul> 
-</div>
-</body>
+<br>
+<br>
+<a href = "/create_post">ADD_POST</a>
