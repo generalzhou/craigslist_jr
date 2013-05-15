@@ -2,37 +2,37 @@
 <div class="container">
 
   <h1>WELCOME TO ABESLIST</h1>
-  <h3>Post to ABESLIST</h3>
+  <h3>Edit your Post</h3>
 
   <table>
   <form method="post" action="/post_created">
     <tr>
       <td>Title:</td>
-      <td><input type = "text" name = "title"></td>
+      <td><input type = "text" name = "title" value="<%=@post.title%>"></td>
     </tr>
     <tr>
       <td>Location:</td>
-      <td><input type = "text" name = "location"></td>
+      <td><input type = "text" name = "location" value="<%=@post.location%>"></td>
     </tr>
     <tr>
       <td>Price (optional):</td>
-      <td><input type = "text" name = "price"></td>
+      <td><input type = "text" name = "price" value="<%=@post.price%>"></td>
     </tr>
     <tr>
       <td>Description:</td>
-      <td><textarea rows="5" columns="50" name="description"></textarea></td>
+      <td><textarea rows="5" columns="50" name="description"><%=@post.description%></textarea></td>
     </tr>
     <tr>
       <td>Category:</td>
       <td><select name="category_id">
           <% @categories.each do |cat| %>
-          <option value="<%=cat.id%>"><%=cat.title%></option>
+          <option value="<%=cat.id%>" <%= "selected" if @post.category_id == cat.id %> ><%=cat.title%></option>
           <% end %>
           </select>
       </td>
     </tr>
     <tr><td class="submit"><input type="submit" name="submit"></td></tr>
-    <input type="hidden" name="id" value="<%=@id || '0'%>">
+    <input type="hidden" name="id" value="<%=@id%>">
     </form>
   </table>
 </div>

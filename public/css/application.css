@@ -4,6 +4,17 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
 th {
   text-align: left;
+}
+
+table {
+  width: 90%;
+}
+
+
+td {
+  padding-bottom: 20px;
+  margin-bottom: 20px; 
 }
