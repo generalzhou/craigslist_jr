@@ -5,6 +5,9 @@
   <ul>
     <% @categories.each do |cat| %>
       <li><a href="/category?id=<%=cat.id %>"><%= cat.title %></a></li>
+      <% if @best_of.any? %>
+      	<li><a href="/best_of %>"></a>OMGNSFWROFLYOLOLOLGTFO</li>
+    	<% end %>
     <% end %>
   </ul>
 

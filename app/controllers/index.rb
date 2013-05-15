@@ -1,6 +1,7 @@
 get '/' do
   # Look in app/views/index.erb
   @categories = Category.all
+  @best_of = Post.where(:OMGNSFWROFLYOLOLOLGTFO => true)
   erb :index
 end
 
@@ -60,4 +61,9 @@ post '/post_created' do
   end
 
   erb :post_created
+end
+
+get '/best_of' do
+  @best_of = Post.where(:OMGNSFWROFLYOLOLOLGTFO => true)
+  erb :best_of
 end
